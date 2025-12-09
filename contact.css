@@ -1,0 +1,116 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+}
+
+/* Navbar */
+.menu-bar {
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 30px;
+}
+
+.menu-items {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-item a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+  color: #fff;
+}
+
+/* Full-screen contact form container */
+.contact-fullview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 60px); /* subtract navbar height */
+  padding: 20px;
+}
+
+/* Contact Form */
+.contact-fullview .contact-form {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Heading */
+.contact-fullview .contact-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* Form fields */
+.contact-fullview .contact-form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.contact-fullview .contact-form input,
+.contact-fullview .contact-form textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+}
+
+.contact-fullview .contact-form input::placeholder,
+.contact-fullview .contact-form textarea::placeholder {
+  color: #bbb;
+}
+
+.contact-fullview .contact-form input:focus,
+.contact-fullview .contact-form textarea:focus {
+  outline: none;
+  border-color: #2ecc71;
+}
+
+/* Button */
+.contact-fullview .contact-form .btn {
+  padding: 10px 25px;
+  background-color: #2ecc71;
+  border-radius: 25px;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-fullview .contact-form .btn:hover {
+  background-color: #81efed;
+  transform: scale(1.05);
+}

@@ -1,0 +1,119 @@
+/* Reset & font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.menu-bar {
+    background-color: #000; /* black navbar */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu-item a {
+    color: #ccc; /* gray text */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu-item a:hover {
+    color: #fff; /* white on hover */
+}
+
+.cart-count {
+    background-color: red;
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Cart Page */
+body {
+    background-color: #2b2b2b; /* dark gray page background */
+    color: #e0e0e0; /* light gray text */
+}
+
+.cart-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 32px;
+    color: #fff; /* white heading */
+}
+
+.cart-container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #3a3a3a; /* dark gray card */
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.cart-item button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-item button:hover {
+    background-color: #c0392b;
+}
+
+.cart-total {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4a4a4a; /* medium gray total section */
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.cart-total button {
+    background-color: #2ecc71;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-total button:hover {
+    background-color: #81efed;
+}

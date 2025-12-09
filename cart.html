@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="menu-bar">
+        <ul class="menu-items">
+            <li class="menu-item"><a href="index.html">Home</a></li>
+            <li class="menu-item"><a href="products.html">Products</a></li>
+            <li class="menu-item"><a href="signin.html">Sign In</a></li>
+            <li class="menu-item"><a href="contact.html">Contact</a></li>
+            <li class="menu-item cart"><a href="cart.html">🛒 Cart <span class="cart-count">0</span></a></li>
+        </ul>
+    </div>
+
+    <h1 class="cart-title">Your Shopping Cart</h1>
+    <div class="cart-container" id="cart-container">
+        <!-- Cart items will appear here -->
+    </div>
+
+    <div class="cart-total">
+        <h2>Total: $<span id="total-price">0.00</span></h2>
+        <button id="clear-cart">Clear Cart</button>
+    </div>
+
+    <script>
+        const cartContainer = document.getElementById("cart-container");
+        const totalPriceElem = document.getElementById("total-price");
+        const cartCountElem = document.querySelector(".cart-count");
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function renderCart() {
+            cartContainer.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price * item.qty;
+                cartContainer.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.name}</span>
+                        <span>$${item.price.toFixed(2)}</span>
+                        <span>Qty: ${item.qty}</span>
+                        <button onclick="removeItem(${index})">Remove</button>
+                    </div>
+                `;
+            });
+            totalPriceElem.textContent = total.toFixed(2);
+            cartCountElem.textContent = cart.length;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+
+        document.getElementById("clear-cart").addEventListener("click", () => {
+            cart = [];
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        });
+
+        renderCart();
+    </script>
+</body>
+</html>
