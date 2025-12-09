@@ -66,3 +66,114 @@ Full Stack project/
 │
 ├── images/           # Images and assets
 └── screenshots/      # Project screenshots
+
+```
+🏗️ Installation & Setup (XAMPP + PHP + MySQL)
+Prerequisites
+
+XAMPP (Apache + MySQL)
+
+Web browser
+
+Git (optional)
+
+Setup Steps
+
+Copy your project folder into:
+
+C:\xampp\htdocs\
+
+
+Example project path:
+
+C:\xampp\htdocs\Full Stack project\
+
+
+Open XAMPP Control Panel
+
+Start Apache
+
+Start MySQL
+
+🗄️ Database Configuration (Optional but Recommended)
+
+Open:
+
+http://localhost/phpmyadmin
+
+
+Create a database:
+
+shopping_store
+
+
+Create a table with fields:
+
+id – INT, AUTO_INCREMENT, PRIMARY KEY
+
+name – VARCHAR(100)
+
+email – VARCHAR(100)
+
+subject – VARCHAR(150)
+
+message – TEXT
+
+Update form.php:
+
+Database name: shopping_store
+
+Username: root
+
+Password: "" (empty)
+
+▶️ Run the Project
+
+Ensure Apache and MySQL are running.
+
+Open browser:
+
+http://localhost/Full%20Stack%20project/index.html
+
+
+Navigate using menu:
+Home | Products | Contact | Sign In | Cart
+
+🔐 Contact Form (PHP + MySQL)
+
+contact.html provides the form UI.
+
+form.php handles form submission using POST.
+
+Performs server-side validation.
+
+Stores data in MySQL (if configured).
+
+Displays submission success or error message.
+
+Form configuration:
+
+<form action="form.php" method="POST">
+
+🎯 Use Cases
+
+Academic mini project
+
+Beginner-level PHP & MySQL practice
+
+Portfolio project for web developer roles
+
+Demonstration of full-stack fundamentals
+
+🚀 Future Enhancements
+
+Database-based user authentication
+
+Real shopping cart using PHP sessions
+
+Admin dashboard (CRUD operations)
+
+Order and checkout workflow
+
+Improved UI responsiveness for mobile devices
+
